@@ -9,20 +9,18 @@ import {
   LOGIN_USER_SUCCESS,
   LOGIN_USER_FAIL,
   LOG_OUT, LOGIN_ERROR_CLEAR,
-  UPDATE_USER_DETAILS
+  UPDATE_USER_DETAILS,
+  API_URL
 } from "../constants";
 import jwt from "jsonwebtoken";
 
-const apiUrl = process.env.REACT_APP_BASE_URL
-
-// const base_url = "http://localhost:3001";
 let expirationTimeout = null;
 
 export const registerUser = (user, callback) => {
   return (dispatch) => {
     dispatch(userRegisterStart());
     return axios
-      .post(`${apiUrl}/register`, user)
+      .post(`${API_URL}/register`, user)
       .then(() => {
         dispatch(registerUserSuccess());
         callback();
@@ -34,16 +32,18 @@ export const registerUser = (user, callback) => {
 };
 
 export const loginUser = (user) => {
+  console.log('user: ', user)
   return async (dispatch) => {
     dispatch(userLoginStart());
     axios
-      .post(`${apiUrl}/login`, user)
+      .post(`${API_URL}/login`, user)
       .then((response) => {
         const user = jwt.decode(response.data.accessToken);
         dispatch(updateUser(user.sub))
         dispatch(userLoginSuccess(response.data.accessToken, user));
       })
       .catch((error) => {
+        console.log('error: ', error)
         dispatch(userLoginFail(error));
       });
   };
@@ -58,7 +58,7 @@ export const getProfileFetch = () => {
 
     if (token  && +expDate > moment().valueOf()) {
       return axios
-        .get(`${apiUrl}/users`)
+        .get(`${API_URL}/users`)
         .then(({data}) => {
           const match = data.some(d => d.email === user.email)
           if (match) {
@@ -83,10 +83,11 @@ export const logOut = () => {
   };
 };
 
+
 const updateUser = (id) => {
   return dispatch => {
     axios
-      .get(`${process.env.REACT_APP_BASE_URL}/users/${id}`)
+      .get(`${API_URL}/users/${id}`)
       .then(({data}) => {
         // if an user has a role
         if (data) {

@@ -68,3 +68,6 @@ export const UPDATE_USER_DETAILS = 'UPDATE_USER_DETAILS'
 // admin
 export const DELETE_USER_SUCCESS = 'DELETE_USER_SUCCESS'
 export const GET_USERS_SUCCESS = 'GET_USERS_SUCCESS'
+
+
+export const API_URL = 'http://localhost:3001'

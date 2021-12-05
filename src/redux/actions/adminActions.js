@@ -1,10 +1,11 @@
 import axios from "axios"
 import {
+    API_URL,
     DELETE_USER_SUCCESS,
     GET_USERS_SUCCESS
 } from '../constants'
 
-const apiUrl = process.env.REACT_APP_BASE_URL
+const apiUrl = API_URL
 
 export const getUsers = () => {
     return dispatch => {

@@ -13,14 +13,15 @@ import {
     DELETE_REVIEW_SUCCESS,
     DELETE_REVIEW_FAIL,
     TOGGLE_EDIT_SUCCESS,
-    TOGGLE_EDIT_FAIL
+    TOGGLE_EDIT_FAIL,
+    API_URL
 } from '../constants'
 
 export const fetchReviews = (id) =>  {
     return dispatch => {
         dispatch(fetchReviewsStart())
         axios
-            .get(`${process.env.REACT_APP_BASE_URL}/reviews?prodId=${id}`)
+            .get(`${API_URL}/reviews?prodId=${id}`)
             .then(({data}) => {
                 dispatch(fetchReviewsSuccess(data))
             })
@@ -32,7 +33,7 @@ export const addReview = (review) => {
     return dispatch => {
         dispatch(addReviewStart())
         axios
-            .post(`${process.env.REACT_APP_BASE_URL}/reviews`, review)
+            .post(`${API_URL}/reviews`, review)
             .then(({data}) => {
                 dispatch(addReviewSuccess(data))
             })
@@ -44,7 +45,7 @@ export const updateReview = (newReview) => {
     return dispatch => {
         dispatch(updateReviewStart())
         axios
-            .put(`${process.env.REACT_APP_BASE_URL}/reviews/${newReview.id}`, newReview)
+            .put(`${API_URL}/reviews/${newReview.id}`, newReview)
             .then(() => {
                 dispatch(updateReviewSuccess(newReview))
                 dispatch(toggleEditMode(newReview))
@@ -57,7 +58,7 @@ export const deleteReview = (id) => {
     return dispatch => {
         dispatch(deleteReviewStart())
         axios
-            .delete(`${process.env.REACT_APP_BASE_URL}/reviews/${id}`)
+            .delete(`${API_URL}/reviews/${id}`)
             .then(() => dispatch(deleteReviewSuccess(id)))
             .catch(error => dispatch(deleteReviewError(error)))
     }
@@ -67,7 +68,7 @@ export const toggleEditMode = (review) => {
     const newReview = {...review, isEditing: !review.isEditing}
     return dispatch => {
         axios
-            .put(`${process.env.REACT_APP_BASE_URL}/reviews/${newReview.id}`, newReview)
+            .put(`${API_URL}/reviews/${newReview.id}`, newReview)
             .then(({ data }) => dispatch(toggleEditSuccess(data)))
             .catch(error => toggleEditFail(error))
     }

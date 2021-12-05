@@ -3,15 +3,18 @@ import {
   PRODUCTS_FETCH_SUCCESS,
   PRODUCTS_FETCH_FAIL,
   PRODUCTS_SET_CATEGORY,
-  SET_TOTAL_COUNT
+  SET_TOTAL_COUNT,
+  API_URL
 } from "../constants";
 import axios from "axios";
 
 const per_page = 10;
 const limit = 10;
 
+
 export const fetchProducts = (category = "", filters = {}, sort_by = null, page = 1) => {
-  let url = `${process.env.REACT_APP_BASE_URL}/products?_start=${(page - 1) * per_page}&_limit=${limit}`;
+
+  let url = `${API_URL}/products?_start=${(page - 1) * per_page}&_limit=${limit}`;
   if (category) {
     url += `&category=${category}`;
   }

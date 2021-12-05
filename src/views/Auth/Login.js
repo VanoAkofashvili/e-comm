@@ -20,7 +20,7 @@ export const Login = () => {
   useEffect(() => {
     if (userLoginError) {
       notification.error({
-        message: 'Invalid credentials' || userLoginError.message
+        message: userLoginError.message || 'Invalid credentials' 
       })
     }
 

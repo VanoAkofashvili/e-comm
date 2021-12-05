@@ -26,6 +26,24 @@
       "name": "shota",
       "phone": "+995234234234",
       "id": 3
+    },
+    {
+      "email": "shotius@gmail.com",
+      "password": "$2a$10$Z5ESUfsEk3osbNqGl2YXreX115ti51b1doe8TPLPscEtniH4.l8nC",
+      "role": "admin",
+      "username": "shotius",
+      "name": "shotius",
+      "phone": "+99512341234",
+      "id": 4
+    },
+    {
+      "email": "qa@gmail.com",
+      "password": "$2a$10$prIds2/w0kFQKSyTn93kOONnUcDCt4Z9bmmWCqHs3l7aZDpTvXV7S",
+      "role": "user",
+      "username": "qa",
+      "name": "qa",
+      "phone": "+99513241234",
+      "id": 5
     }
   ],
   "products": [
@@ -270,6 +288,41 @@
       "description": "<p>სრულიად ახალი ლეპტოპი, გაუხსნელი ორიგინალ ყუთში. მსუბუქი ლამაზი და კომფორტული.&nbsp;14-dq1020nr, Natural Silver.&nbsp;მოყვება ოფიციალური ვინდოუს 10</p><p>HP 14-inch Laptop, Intel Core i3-1005G1, 4 GB RAM, 128 GB SSD Storage, Windows 10 Home in S Mode (14-dq1020nr, Natural Silver)</p><ul><li>BIOS Recovery and Protection: Automatically checks the health of your PC, protects against unauthorized access, secures local storage and recovers itself from bootup issues</li><li>Fast boot up with SSD: Boot up in seconds, transfer files without waiting hours, and enjoy a speedy experience with the internal solid-state drive</li><li>Reliable laptop with slim, stylish design: Slim, ultra-portable and with hours of battery life so you can stay social, productive and connected</li><li>Environmentally conscious: Low halogen, mercury-free display backlights, arsenic-free display glass in this ENERGY STAR(R) certified, EPEAT(R) Silver registered laptop</li><li>Reliable processor: 10th Generation Intel(R) Core(TM) i3-1005G1, Dual-Core, 1.2 GHz base frequency, up to 3.4 GHz with Intel Turbo Boost Technology</li><li>Display: 14.0-inch diagonal HD, BrightView, micro-edge, WLED-backlit (1366 x 768); 79% screen to body ratio</li><li>Higher bandwidth memory &amp; fast bootup with solid-state drive: 4 GB DDR4-2666 SDRAM</li></ul><p><br></p>",
       "image": "https://static.my.ge/mymarket/photos/large/0501/20851023_1.jpg?v=1",
       "id": 15
+    },
+    {
+      "shipping": "4.65",
+      "userId": 4,
+      "title": "DELL - Vostro 3500/N3001VN3500EMEA01_2201",
+      "brand": "Dell",
+      "price": 1999,
+      "description": "<p><em>ახალი/უხმარი Dell vostro, 15.6 inches Full HD IPS Display, AMD Ryzen 3 3200U, Vega 3 Graphics, 4GB DDR4, 128GB SSD, Backlit Keyboard, Windows 10 in S Mode, A515-43-R19L, Silver</em></p><p><em>*გარანტირებული ამერიკული ხარისხი / ორიგინალი&nbsp;Acer&nbsp;.</em></p><p><em>*ლეპტოპები არ არის ჩართული - ყუთიდან არ არის ამოღებული / ორიგინალი ქარხნული შეფუთვით.&nbsp;</em></p><p><em>*ქარხნული გაუხსნელი დაპლომბილი ყუთით - პარკებში, პასპორტით და აქსესუარებით.</em></p><p><em>- - - - გარანტია 1 წელი - - - -</em></p><p><em>ტექნიკური დახასიათება:</em></p><ul><li>Brand: Dell</li><li>Series: Vostro</li><li>Item model number: A515-43-R19L</li><li>15.6 inches full HD (1920 x 1080) widescreen LED backlit IPS display;</li><li>AMD Ryzen 3 3200U Dual Core Processor (Up to 3.5GHz);&nbsp;</li><li>RAM: 4GB DDR4 Memory;&nbsp;</li><li>SSD: 128GB PCIe NVMe SSD</li><li>Graphics: AMD Radeon Vega 3 Mobile Graphics</li><li>1 USB 3.1 Gen 1 port, 2 USB 2.0 ports &amp; 1 HDMI port with HDCP support</li><li>802.11ac Wi-Fi;&nbsp;</li><li>Backlit Keyboard;&nbsp;</li><li>Up to 7.5 hours battery life</li><li>Windows 10 in S mode</li></ul><p><br></p>",
+      "image": "https://assets.ee.ge/elit-product-images/IMG-000023625-1.jpg",
+      "id": 18
+    },
+    {
+      "shipping": "8.41",
+      "userId": 5,
+      "id": 21
+    },
+    {
+      "shipping": "8.53",
+      "userId": 5,
+      "id": 0.6518822382293286,
+      "title": "ყავის აპარატი VENETI VI 6823",
+      "brand": "Veneti",
+      "price": 360,
+      "description": "<ul><li>კაპუჩინოს,ესპრესოს,ლატეს აპარატი</li><li>წნევა: 15 ბარი</li><li>მოცულობა: 1,6ლ</li><li>ყავის ტიპი: დაფქვილი</li><li>ფუნქციები : ორთქლი/ცხელი წყალი</li><li>მოცურების საწინააღმდეგო ფეხები</li><li>გარანტია: 1 წელი</li><li>ორთქლის გამოშვების კონტროლი</li><li>წყლის სწრაფად გაცხელების სისტემა</li><li>სითბოს შენარჩუნების ფუნქცია</li><li>ძაბვის მახასიათებლები: 220-240V; 50 / 60Hz</li><li>სიმძლავრე: 850W</li><li>გარანტია 1 წელი</li></ul>",
+      "image": "https://static.my.ge/mymarket/photos/large/0102/19323167_1.jpg?v=4"
+    },
+    {
+      "shipping": "1.88",
+      "userId": 5,
+      "id": 0.675107863752491,
+      "title": "ყავის აპარატი VENETI VI 6823",
+      "brand": "Veneti",
+      "price": 360,
+      "description": "<ul><li>კაპუჩინოს,ესპრესოს,ლატეს აპარატი</li><li>წნევა: 15 ბარი</li><li>მოცულობა: 1,6ლ</li><li>ყავის ტიპი: დაფქვილი</li><li>ფუნქციები : ორთქლი/ცხელი წყალი</li><li>მოცურების საწინააღმდეგო ფეხები</li><li>გარანტია: 1 წელი</li><li>ორთქლის გამოშვების კონტროლი</li><li>წყლის სწრაფად გაცხელების სისტემა</li><li>სითბოს შენარჩუნების ფუნქცია</li><li>ძაბვის მახასიათებლები: 220-240V; 50 / 60Hz</li><li>სიმძლავრე: 850W</li><li>გარანტია 1 წელი</li></ul>",
+      "image": "https://static.my.ge/mymarket/photos/large/0102/19323167_1.jpg?v=4"
     }
   ],
   "reviews": [
@@ -334,6 +387,18 @@
       "isEditing": false,
       "id": 5,
       "stars": 5
+    },
+    {
+      "review": "HELO\n",
+      "user": {
+        "email": "shotius@gmail.com",
+        "iat": 1638693570,
+        "exp": 1638697170,
+        "sub": "4"
+      },
+      "prodId": 18,
+      "isEditing": false,
+      "id": 6
     }
   ]
 }

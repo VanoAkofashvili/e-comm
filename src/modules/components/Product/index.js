@@ -20,6 +20,7 @@ import ReviewList from './Reviews/ReviewList'
 
 import ExtraImages from "../ExtraImages";
 import {extraImages} from "../../../const/productExtraImages";
+import { API_URL } from "../../../redux/constants";
 
 
 const {confirm} = Modal;
@@ -39,7 +40,7 @@ const Product = ({id}) => {
   useEffect(() => {
     setIsLoading(true);
     axios
-      .get(`${process.env.REACT_APP_BASE_URL}/products?id=${id}`)
+      .get(`${API_URL}/products?id=${id}`)
       .then((response) => {
         setProduct(response.data[0]);
         setIsLoading(false);

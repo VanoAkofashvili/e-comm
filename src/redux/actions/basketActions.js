@@ -4,14 +4,15 @@ import {
   BASKET_ITEMS_GET_FAIL,
   BASKET_ITEM_DELETE_START,
   BASKET_ITEM_DELETE_SUCCESS,
-  BASKET_ITEM_DELETE_FAIL
+  BASKET_ITEM_DELETE_FAIL,
+  API_URL
 } from '../constants'
 import axios from "axios";
 
 export const fetchBasketProducts = (userId) => {
   return dispatch => {
     dispatch(fetchBasketItemsStart())
-    axios.get(`${process.env.REACT_APP_BASE_URL}/basket?userId=${+userId}`)
+    axios.get(`${API_URL}/basket?userId=${+userId}`)
       .then(({ data }) => dispatch(fetchBasketItemsSuccess(data)))
       .catch(error => dispatch(fetchBasketItemsError(error)))
   }
@@ -20,7 +21,7 @@ export const fetchBasketProducts = (userId) => {
 export const deleteBasketItem = (product) => {
   return dispatch => {
     dispatch(deleteProductStart())
-    axios.delete(`${process.env.REACT_APP_BASE_URL}/basket/${product.id}`)
+    axios.delete(`${API_URL}/basket/${product.id}`)
       .then(() => {
         dispatch(deleteProductSuccess())
         dispatch(fetchBasketProducts(product.userId))

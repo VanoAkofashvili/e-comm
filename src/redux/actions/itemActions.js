@@ -10,7 +10,8 @@ import {
   EDIT_PRODUCT_START,
   EDIT_PRODUCT_SUCCESS,
   EDIT_PRODUCT_FAIL,
-  SET_NOW_EDITING
+  SET_NOW_EDITING,
+  API_URL
 } from "../constants";
 import axios from "axios";
 import {notification} from "antd";
@@ -20,7 +21,7 @@ export const editProduct = (id, newInfo) => {
     dispatch(editProductStart())
     // console.log(newInfo)
     axios
-      .put(`${process.env.REACT_APP_BASE_URL}/products/${id}`, newInfo)
+      .put(`${API_URL}/products/${id}`, newInfo)
       .then(response => {
         dispatch(editProductSuccess())
       })
@@ -53,7 +54,7 @@ export const deleteProduct = (id) => {
   return dispatch => {
     dispatch(deleteProductStart())
     axios
-      .delete(`${process.env.REACT_APP_BASE_URL}/products/${id}`)
+      .delete(`${API_URL}/products/${id}`)
       .then(response => {
         dispatch(deleteProductSuccess())
         notification.success({
@@ -86,7 +87,7 @@ export const addProduct = (productInfo) => {
   return dispatch => {
     dispatch(addProductStart())
     return axios
-      .post(`${process.env.REACT_APP_BASE_URL}/products`, productInfo)
+      .post(`${API_URL}/products`, productInfo)
       .then(response => {
         dispatch(addProductSuccess())
       })
